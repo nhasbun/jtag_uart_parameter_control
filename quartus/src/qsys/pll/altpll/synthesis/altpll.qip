@@ -1,0 +1,21 @@
+set_global_assignment -entity "altpll" -library "altpll" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "altpll" -library "altpll" -name IP_TOOL_VERSION "13.0sp1"
+set_global_assignment -entity "altpll" -library "altpll" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "altpll" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../altpll.sopcinfo"]
+set_instance_assignment -entity "altpll" -library "altpll" -name SLD_INFO "QSYS_NAME altpll HAS_SOPCINFO 1 GENERATION_ID 1516989307"
+set_global_assignment -library "altpll" -name MISC_FILE [file join $::quartus(qip_path) "../../altpll.cmp"]
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "altpll" -name MISC_FILE [file join $::quartus(qip_path) "../../altpll.qsys"]
+
+set_global_assignment -library "altpll" -name VERILOG_FILE [file join $::quartus(qip_path) "altpll.v"]
+set_global_assignment -library "altpll" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.v"]
+set_global_assignment -library "altpll" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_synchronizer.v"]
+set_global_assignment -library "altpll" -name SDC_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.sdc"]
+set_global_assignment -library "altpll" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altpll_ALTPLL.v"]
+
+set_global_assignment -entity "altera_reset_controller" -library "altpll" -name IP_TOOL_NAME "altera_reset_controller"
+set_global_assignment -entity "altera_reset_controller" -library "altpll" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_reset_controller" -library "altpll" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altpll_ALTPLL" -library "altpll" -name IP_TOOL_NAME "altpll"
+set_global_assignment -entity "altpll_ALTPLL" -library "altpll" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altpll_ALTPLL" -library "altpll" -name IP_TOOL_ENV "Qsys"
